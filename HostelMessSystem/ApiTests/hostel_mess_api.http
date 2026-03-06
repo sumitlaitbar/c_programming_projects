@@ -1,0 +1,49 @@
+@baseUrl = https://localhost:5001
+@token = REPLACE_JWT_TOKEN
+
+### Login
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "Admin@123"
+}
+
+### Register Student
+POST {{baseUrl}}/api/student/register
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Rahul Kumar",
+  "roomNumber": "B-204",
+  "nfcCardId": "NFC123456",
+  "biometricId": "BIO123456"
+}
+
+### Mark Attendance by NFC
+POST {{baseUrl}}/api/attendance/nfc
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nfcCardId": "NFC123456"
+}
+
+### Mark Attendance by Biometric
+POST {{baseUrl}}/api/attendance/biometric
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "biometricId": "BIO123456"
+}
+
+### Today's Attendance
+GET {{baseUrl}}/api/attendance/today
+Authorization: Bearer {{token}}
+
+### Student Attendance History
+GET {{baseUrl}}/api/attendance/history/1
+Authorization: Bearer {{token}}

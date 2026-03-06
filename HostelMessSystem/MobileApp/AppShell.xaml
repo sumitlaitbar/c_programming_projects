@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MobileApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MobileApp.Views"
+    Title="Hostel Mess System">
+
+    <ShellContent Title="Login" ContentTemplate="{DataTemplate views:LoginPage}" Route="LoginPage" />
+    <ShellContent Title="Dashboard" ContentTemplate="{DataTemplate views:AdminDashboardPage}" Route="AdminDashboardPage" />
+    <ShellContent Title="Register" ContentTemplate="{DataTemplate views:StudentRegistrationPage}" Route="StudentRegistrationPage" />
+    <ShellContent Title="NFC" ContentTemplate="{DataTemplate views:NfcScanPage}" Route="NfcScanPage" />
+    <ShellContent Title="Biometric" ContentTemplate="{DataTemplate views:BiometricScanPage}" Route="BiometricScanPage" />
+    <ShellContent Title="History" ContentTemplate="{DataTemplate views:AttendanceHistoryPage}" Route="AttendanceHistoryPage" />
+    <ShellContent Title="Profile" ContentTemplate="{DataTemplate views:StudentProfilePage}" Route="StudentProfilePage" />
+</Shell>
