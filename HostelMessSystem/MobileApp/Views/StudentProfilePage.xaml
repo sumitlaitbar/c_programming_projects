@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Views.StudentProfilePage"
+             Title="Student Profile">
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Entry x:Name="StudentIdEntry" Placeholder="Student ID" Keyboard="Numeric" />
+        <Button Text="Load Profile" Clicked="OnLoadProfile" />
+        <Editor x:Name="ProfileEditor" HeightRequest="240" />
+    </VerticalStackLayout>
+</ContentPage>

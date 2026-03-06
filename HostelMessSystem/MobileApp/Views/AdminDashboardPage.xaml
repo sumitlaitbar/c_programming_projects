@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Views.AdminDashboardPage"
+             Title="Dashboard">
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Label x:Name="SummaryLabel" Text="Loading today summary..." FontSize="18" />
+        <Button Text="Refresh Today Attendance" Clicked="OnRefresh"/>
+        <Button Text="Register Student" Clicked="OnGoRegister"/>
+        <Button Text="NFC Scan" Clicked="OnGoNfc"/>
+        <Button Text="Biometric Scan" Clicked="OnGoBio"/>
+    </VerticalStackLayout>
+</ContentPage>
